@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5233b">
+  <title>SMASHZONE | 배드민턴의 모든 것</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar wrap">
+    <a class="brand" href="#" data-page="home" aria-label="SMASHZONE 홈"><span class="brand-mark">S</span><span>SMASH<span>ZONE</span></span></a>
+    <form id="search-form" class="search"><input id="search-input" type="search" placeholder="상품을 검색해보세요" aria-label="상품 검색"><button aria-label="검색">⌕</button></form>
+    <div class="header-actions"><button id="account-button" class="text-btn">로그인</button><button id="cart-button" class="cart-btn">장바구니 <b id="cart-count">0</b></button></div>
+  </div>
+  <nav class="main-nav"><div class="wrap nav-inner">
+    <a href="#" data-page="home" class="nav-link active">홈</a>
+    <a href="#products" data-category="라켓" class="nav-link">라켓</a>
+    <a href="#products" data-category="셔틀콕" class="nav-link">셔틀콕</a>
+    <a href="#products" data-category="그립·스트링" class="nav-link">그립·스트링</a>
+    <a href="#products" data-category="가방·용품" class="nav-link">가방·용품</a>
+  </div></nav>
+</header>
+
+<main>
+  <section class="hero wrap" aria-label="SMASHZONE 프로모션">
+    <div class="hero-slides">
+      <article class="hero-slide active" style="--hero:url('img/banner-1.svg')"><div class="hero-copy"><p class="eyebrow">PLAY YOUR BEST</p><h1>오늘의 스매시,<br>새로운 기록으로.</h1><p>당신의 코트를 완성하는 배드민턴 셀렉션</p><button class="primary-btn" data-scroll-products>상품 둘러보기 <span>→</span></button></div></article>
+      <article class="hero-slide" style="--hero:url('img/banner-2.svg')"><div class="hero-copy"><p class="eyebrow">RACKET COLLECTION</p><h1>한 번의 스윙에<br>완벽한 밸런스.</h1><p>나에게 맞는 라켓을 찾아보세요</p><button class="primary-btn" data-category="라켓">라켓 보러가기 <span>→</span></button></div></article>
+      <article class="hero-slide" style="--hero:url('img/banner-3.svg')"><div class="hero-copy"><p class="eyebrow">SHUTTLECOCK</p><h1>정확한 비행,<br>짜릿한 랠리.</h1><p>연습부터 게임까지 믿을 수 있는 셔틀콕</p><button class="primary-btn" data-category="셔틀콕">셔틀콕 보러가기 <span>→</span></button></div></article>
+      <article class="hero-slide" style="--hero:url('img/banner-4.svg')"><div class="hero-copy"><p class="eyebrow">GEAR UP</p><h1>디테일이 만드는<br>경기의 차이.</h1><p>그립부터 가방까지 플레이에 필요한 모든 것</p><button class="primary-btn" data-category="그립·스트링">용품 보러가기 <span>→</span></button></div></article>
+    </div>
+    <button class="slide-arrow prev" aria-label="이전 배너">‹</button><button class="slide-arrow next" aria-label="다음 배너">›</button>
+    <div class="slide-dots" aria-label="배너 선택"></div>
+  </section>
+
+  <section class="benefits wrap">
+    <div><span class="benefit-icon">🚚</span><p><b>전국 무료배송</b><small>5만원 이상 구매 시</small></p></div>
+    <div><span class="benefit-icon">🎁</span><p><b>가입 축하 포인트</b><small>신규 회원 3,000P</small></p></div>
+    <div><span class="benefit-icon">🏆</span><p><b>회원 등급 혜택</b><small>최대 7% 적립</small></p></div>
+    <div><span class="benefit-icon">💬</span><p><b>스포츠 라이프</b><small>SMASHZONE과 함께</small></p></div>
+  </section>
+
+  <section id="products" class="products-section wrap">
+    <div class="section-heading"><div><p class="eyebrow red">FIND YOUR GEAR</p><h2>스매시존 추천 상품</h2><p class="section-sub">코트 위 플레이를 한 단계 업그레이드하세요.</p></div><span id="product-total" class="muted"></span></div>
+    <div class="catalog-tools"><div id="category-filters" class="filter-list"></div><select id="sort-select" aria-label="상품 정렬"><option value="popular">추천순</option><option value="low">낮은 가격순</option><option value="high">높은 가격순</option></select></div>
+    <div id="product-grid" class="product-grid"></div>
+  </section>
+
+  <section class="join-banner wrap"><div><p class="eyebrow">WELCOME TO SMASHZONE</p><h2>첫 쇼핑부터 기분 좋은 혜택</h2><p>회원가입하고 3,000P를 바로 받아보세요.</p></div><button class="light-btn" data-open-auth="signup">3,000P 받기 <span>→</span></button></section>
+</main>
+
+<footer class="site-footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>SMASH<span>ZONE</span></span></a><p>SMASHZONE · 배드민턴을 사랑하는 사람들의 쇼핑 플레이스</p><small>본 사이트는 경영데이터베이스및실습 과제를 위한 체험용 쇼핑몰입니다. 실제 결제는 진행되지 않습니다.</small></div></footer>
+
+<div id="modal-root" class="modal-root" aria-live="polite"></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
